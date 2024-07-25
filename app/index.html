@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="main__container">
+      <h1 class="sr-only">Give me your credit card details!!!!!</h1>
+      <div class="card__container" aria-hidden="true">
+        <picture class="card__bg" aria-hidden="true">
+          <source srcset="./assets/images/bg-main-desktop.png" media="(min-width: 60em)" />
+          <img src="./assets/images/bg-main-mobile.png" alt="Violet gradient background" />
+        </picture>
+        <div class="card__wrapper">
+          <div class="card__back">
+            <div class="card__back__inner">
+              <img
+                class="card__back__image"
+                src="./assets/images/bg-card-back.png"
+                alt="Card back image"
+                aria-hidden="true"
+              />
+              <div class="card__back__content">
+                <p class="card__back__cvc">
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card__front">
+            <div class="card__front__inner">
+              <img
+                class="card__front__image"
+                src="./assets/images/bg-card-front.png"
+                alt="Card front image"
+                aria-hidden="true"
+              />
+              <div class="card__front__content">
+                <div class="card__front__circle-wrapper">
+                  <div class="card__front__circle-solid"></div>
+                  <div class="card__front__circle-hollow"></div>
+                </div>
+                <p class="card__front__number">
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span data-ws>&nbsp;</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span data-ws>&nbsp;</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span data-ws>&nbsp;</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
+                  <span>0</span>
+                </p>
+                <div class="card__front__footer">
+                  <p class="card__front__name">Jane Appleseed</p>
+                  <p class="card__front__expire">
+                    <span class="card__front__expire-month">
+                      <span>0</span>
+                      <span>0</span>
+                    </span>
+                    <span>/</span>
+                    <span class="card__front__expire-year">
+                      <span>0</span>
+                      <span>0</span>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details__container">
+        <section class="details__inner">
+          <h2 class="sr-only">Card details</h2>
+          <form class="details__form">
+            <div class="textbox cardholder-name">
+              <label class="textbox__label" for="cardholder-name">Cardholder Name</label>
+              <div class="textbox__input-wrapper">
+                <input
+                  class="textbox__input"
+                  id="cardholder-name"
+                  type="text"
+                  placeholder="e.g. Jane Appleseed"
+                  aria-invalid="false"
+                  aria-describedby="cardholder-name-hint"
+                />
+
+                <span class="textbox__input-border-gradient"></span>
+                <span class="textbox__input-border-main"></span>
+              </div>
+              <p class="textbox__hint" id="cardholder-name-hint"></p>
+            </div>
+            <div class="textbox card-number">
+              <label class="textbox__label" for="card-number">Card Number</label>
+              <div class="textbox__input-wrapper">
+                <input
+                  class="textbox__input"
+                  id="card-number"
+                  type="text"
+                  placeholder="e.g. 1234 5678 9123 0000"
+                  aria-invalid="false"
+                  aria-describedby="card-number-hint"
+                />
+                <span class="textbox__input-border-gradient"></span>
+                <span class="textbox__input-border-main"></span>
+              </div>
+              <p class="textbox__hint" id="card-number-hint"></p>
+            </div>
+            <div class="details__expire-cvc-wrapper">
+              <fieldset class="details__expire">
+                <legend class="details__expire__label">
+                  <span class="sr-only">Expire date (month and 2 last number of year)</span>
+                  <span aria-hidden="true">Exp. Date (MM/YY)</span>
+                </legend>
+                <div class="details__expire__content">
+                  <div class="textbox expire-month">
+                    <label class="textbox__label sr-only" for="expire-month"> Month expire </label>
+                    <div class="textbox__input-wrapper">
+                      <input
+                        class="textbox__input"
+                        id="expire-month"
+                        type="text"
+                        placeholder="MM"
+                        aria-invalid="false"
+                        aria-describedby="expire-month-hint"
+                      />
+                      <span class="textbox__input-border-gradient"></span>
+                      <span class="textbox__input-border-main"></span>
+                    </div>
+                    <span class="textbox__hint sr-only" id="expire-month-hint"></span>
+                  </div>
+                  <div class="textbox expire-year">
+                    <label class="textbox__label sr-only" for="expire-year"> Year expire </label>
+                    <div class="textbox__input-wrapper">
+                      <input
+                        class="textbox__input"
+                        id="expire-year"
+                        type="text"
+                        placeholder="YY"
+                        aria-invalid="false"
+                        aria-describedby="expire-year-hint"
+                      />
+                      <span class="textbox__input-border-gradient"></span>
+                      <span class="textbox__input-border-main"></span>
+                    </div>
+                    <span class="textbox__hint sr-only" id="expire-year-hint"></span>
+                  </div>
+                </div>
+                <p class="details__expire__hint"></p>
+              </fieldset>
+
+              <div class="textbox cvc-number">
+                <label class="textbox__label" for="cvc-number">CVC</label>
+                <div class="textbox__input-wrapper">
+                  <input
+                    class="textbox__input"
+                    id="cvc-number"
+                    type="text"
+                    placeholder="e.g. 123"
+                    aria-invalid="false"
+                    aria-describedby="cvc-number-hint"
+                  />
+
+                  <span class="textbox__input-border-gradient"></span>
+                  <span class="textbox__input-border-main"></span>
+                </div>
+                <p class="textbox__hint" id="cvc-number-hint"></p>
+              </div>
+            </div>
+            <button class="details__form__submit-btn btn-primary" type="submit">
+              <span>Confirm</span>
+            </button>
+          </form>
+          <p class="sr-only" id="form-error-messages" aria-live="polite"></p>
+        </section>
+        <section
+          class="success__modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Submit successful"
+          hidden
+        >
+          <img
+            class="success__icon"
+            src="./assets/icons/icon-complete.svg"
+            alt="Complete icon"
+            aria-hidden="true"
+          />
+          <h2 class="success__title">Thank you</h2>
+          <p class="success__description">We've added your card details</p>
+          <a class="success__continue-btn btn-primary" href=""><span>Continue</span></a>
+        </section>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
