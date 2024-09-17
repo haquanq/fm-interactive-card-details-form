@@ -2,11 +2,11 @@
 
 ## What are you most proud of, and what would you do differently next time?
 
-Hello guys 👋👋👋
+Hello everyone :moyai:
 
-This project gave me many new idea on responsive sizings. I feel like i did this challenge pretty solid 😁
+I did spend sometimes to find different blogs on making elements responsive and after everything i decided to leverage CSS built in function (`clamp(), min(), max(), calc()`) to calculate various sizes for certain eleemnt (parent to children). Maybe this won't work on old browser but i'n glad it worked for the current need.
 
-🚀 **Built with**
+:seedling: **Built with**
 
 - Mobile-first workflow
 - ARIA specifications
@@ -14,18 +14,18 @@ This project gave me many new idea on responsive sizings. I feel like i did this
 - Pure CSS
 - Vanilla JavaScript
 
-🐲 **What i have done**
+:memo: **What i have done**
 
-- Card details is reflected on the image via `input` event and also formatted to avoid user's typing mistakes
-- Fluid responsive card on viewport changes
-- Accessible form for screen readers
-- Overridden default effect on focus (buttons, inputs, links).
-- Used my own judgement to achieve **pixel-perfect** without design files.
+- Card details is reflected on the image on `input` change event.
+- Each text fields is formatted on change to enforce the correctness of the required format (card numbers, CVC, date).
+- Made form elements accessible (centralized error messages, hints on each input).
+- Made the solution as close to the design as possible (i don't have Figma files).
+- Added custom effects on interactive elements (on focus/active/hover).
 
 ## What challenges did you encounter, and how did you overcome them?
 
-None 🐱
+The challenge was there, but i overcame it anyway.
 
 ## What specific areas of your project would you like help with?
 
-Any feedback is appreciated 🙏
+Would love to hear your opinions on any topic.
