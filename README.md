@@ -56,7 +56,7 @@ Developed with mobile-first workflow.
 | `HTML`       | Standard markup language |
 | `CSS`        | Style sheet language     |
 
-## Working in `fm-interactive-card-details-form` repository
+## :astronaut: Working in `fm-interactive-card-details-form` repository
 
 ### Presequisites
 
