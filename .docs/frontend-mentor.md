@@ -4,7 +4,7 @@
 
 Hello everyone :moyai:
 
-I did spend sometimes to find different blogs on making elements responsive and after everything i decided to leverage CSS built in function (`clamp(), min(), max(), calc()`) to calculate various sizes for certain elemnt (parent to children). Maybe this won't work on old browser but i'm glad it worked for the current need.
+I did spend sometimes to find different blogs on making elements responsive and after everything i decided to leverage CSS built in function (`clamp(), min(), max(), calc()`) to calculate various sizes for certain element (parent to children). Maybe this won't work on old browser but i'm glad it worked for the current need.
 
 :seedling: **Built with**
 
