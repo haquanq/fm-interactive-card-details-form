@@ -89,4 +89,4 @@ npm run dev
 
 ## :page_with_curl: License
 
-This project follows [MIT License](./LICENSE). **Do not** use this project as your solution on [Frontend mentor](https://www.frontendmentor.io/solutions) as this will prove you are too lazy to complete anything in your life and you are a moron.
+This project follows [MIT License](./LICENSE). **Do not** use this project as your solution on [Frontend mentor](https://www.frontendmentor.io/solutions)
