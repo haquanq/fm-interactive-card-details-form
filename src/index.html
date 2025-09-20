@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="sr-only">Give me your credit card details!!!!!</h1>
+      <div class="credit-card" aria-hidden="true">
+        <picture class="credit-card__bg">
+          <source srcset="./assets/images/bg-main-desktop.png" media="(min-width: 60em)" />
+          <img src="./assets/images/bg-main-mobile.png" alt="" />
+        </picture>
+        <div class="credit-card__wrapper">
+          <div class="credit-card__back">
+            <div class="credit-card__back-inner">
+              <img class="credit-card__back-image" src="./assets/images/bg-card-back.png" alt="" />
+              <div class="credit-card__back-content">
+                <p class="credit-card__back-cvc"><span>0</span><span>0</span><span>0</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="credit-card__front">
+            <div class="credit-card__front-inner">
+              <img class="credit-card__front-image" src="./assets/images/bg-card-front.png" alt="" />
+              <div class="credit-card__front-content">
+                <div class="credit-card__front-circle-wrapper">
+                  <div class="credit-card__front-circle-solid"></div>
+                  <div class="credit-card__front-circle-hollow"></div>
+                </div>
+                <p class="credit-card__front-number">
+                  <span>0</span><span>0</span><span>0</span><span>0</span>&nbsp;<span>0</span><span>0</span
+                  ><span>0</span><span>0</span>&nbsp;<span>0</span><span>0</span><span>0</span><span>0</span>&nbsp;
+                  <span>0</span><span>0</span><span>0</span><span>0</span>
+                </p>
+                <div class="credit-card__front-footer">
+                  <p class="credit-card__front-name">Jane Appleseed</p>
+                  <p class="credit-card__front-expire">
+                    <span class="credit-card__front-expire-month"><span>0</span><span>0</span></span>
+                    <span>/</span>
+                    <span class="credit-card__front-expire-year"><span>0</span><span>0</span></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details">
+        <section class="details__inner">
+          <h2 class="sr-only">Card details</h2>
+          <form class="details__form" novalidate>
+            <div class="text-field" id="cc-name-text-field">
+              <label class="text-field__label" for="cc-name-input">Cardholder Name</label>
+              <div class="text-field__input-wrapper">
+                <input
+                  class="text-field__input"
+                  id="cc-name-input"
+                  name="cc-name"
+                  type="text"
+                  required
+                  maxlength="30"
+                  autocapitalize="words"
+                  autocomplete="cc-name"
+                  placeholder="e.g. Jane Appleseed"
+                  aria-invalid="false"
+                  aria-describedby="cc-name-input-hint"
+                />
+
+                <span class="text-field__input-border-gradient"></span>
+                <span class="text-field__input-border-main"></span>
+              </div>
+              <p class="text-field__hint" id="cc-name-input-hint"></p>
+            </div>
+            <div class="text-field" id="cc-number-text-field">
+              <label class="text-field__label" for="cc-number-input">Card Number</label>
+              <div class="text-field__input-wrapper">
+                <input
+                  class="text-field__input"
+                  id="cc-number-input"
+                  type="text"
+                  required
+                  inputmode="numeric"
+                  autocomplete="cc-number"
+                  placeholder="e.g. 1234 5678 9123 0000"
+                  aria-invalid="false"
+                  aria-describedby="cc-number-input-hint"
+                />
+                <span class="text-field__input-border-gradient"></span>
+                <span class="text-field__input-border-main"></span>
+              </div>
+              <p class="text-field__hint" id="cc-number-input-hint"></p>
+            </div>
+
+            <div class="text-field" id="cc-expire-text-field">
+              <fieldset class="text-field__group">
+                <legend class="text-field__label">
+                  <span class="sr-only">Expire date (month and 2 last number of year)</span>
+                  <span aria-hidden="true">Exp. Date (MM/YY)</span>
+                </legend>
+                <div class="text-field" id="cc-expire-month-text-field">
+                  <label class="text-field__label sr-only" for="cc-expire-month-input">Expire month</label>
+                  <div class="text-field__input-wrapper">
+                    <input
+                      class="text-field__input"
+                      id="cc-expire-month-input"
+                      type="text"
+                      required
+                      maxlength="2"
+                      inputmode="numeric"
+                      autocomplete="cc-exp-month"
+                      placeholder="MM"
+                      aria-invalid="false"
+                      aria-describedby="cc-expire-input-hint"
+                    />
+                    <span class="text-field__input-border-gradient"></span>
+                    <span class="text-field__input-border-main"></span>
+                  </div>
+                </div>
+                <div class="text-field" id="cc-expire-year-text-field">
+                  <label class="text-field__label sr-only" for="cc-expire-year-input">Expire year</label>
+                  <div class="text-field__input-wrapper">
+                    <input
+                      class="text-field__input"
+                      id="cc-expire-year-input"
+                      type="text"
+                      required
+                      maxlength="2"
+                      inputmode="numeric"
+                      autocomplete="cc-exp-year"
+                      placeholder="YY"
+                      aria-invalid="false"
+                      aria-describedby="cc-expire-input-hint"
+                    />
+                    <span class="text-field__input-border-gradient"></span>
+                    <span class="text-field__input-border-main"></span>
+                  </div>
+                </div>
+              </fieldset>
+              <p class="text-field__hint" id="cc-expire-input-hint"></p>
+            </div>
+
+            <div class="text-field" id="cc-cvc-text-field">
+              <label class="text-field__label" for="cc-cvc-input">CVC</label>
+              <div class="text-field__input-wrapper">
+                <input
+                  class="text-field__input"
+                  id="cc-cvc-input"
+                  type="text"
+                  required
+                  maxlength="3"
+                  inputmode="numeric"
+                  placeholder="e.g. 123"
+                  aria-invalid="false"
+                  aria-describedby="cc-cvc-input-hint"
+                />
+
+                <span class="text-field__input-border-gradient"></span>
+                <span class="text-field__input-border-main"></span>
+              </div>
+              <p class="text-field__hint" id="cc-cvc-input-hint"></p>
+            </div>
+            <button class="details__submit-btn btn" type="submit">
+              <span>Confirm</span>
+            </button>
+          </form>
+          <p class="details__form-message sr-only" aria-live="polite"></p>
+        </section>
+        <section class="success" hidden>
+          <img class="success__icon" src="./assets/images/icon-complete.svg" alt="" />
+          <h2 class="success__title">Thank you</h2>
+          <p class="success__description">We've added your card details</p>
+          <a class="success__continue-btn btn" href=""><span>Continue</span></a>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="./app.ts"></script>
+  </body>
+</html>

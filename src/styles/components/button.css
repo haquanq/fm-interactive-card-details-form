@@ -1,0 +1,42 @@
+.btn {
+    padding-block: 1.125rem 1.0625rem;
+    padding-inline: 1rem;
+    width: 100%;
+    border-radius: var(--rounded-base);
+    background-color: var(--clr-violet-500);
+    color: var(--clr-white);
+    font-size: var(--text-md);
+    transition: transform 200ms ease;
+    position: relative;
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+
+    span {
+        position: relative;
+        z-index: 3;
+    }
+
+    &::before {
+        background: var(--gradient-primary);
+        position: absolute;
+        border-radius: inherit;
+        content: "";
+        display: block;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 300ms ease;
+        box-shadow: hsla(var(--clr-violet-500-hsl), 0.2) 0 16px 32px 0;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+}

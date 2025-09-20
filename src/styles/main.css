@@ -1,0 +1,25 @@
+@import "./base/fonts.css";
+@import "./base/variables.css";
+@import "./base/reset.css";
+
+@import "./components/button.css";
+@import "./components/text-field.css";
+@import "./components/details.css";
+@import "./components/credit-card.css";
+
+@import "./components/success.css";
+
+@import "./utils/a11y.css";
+
+.main {
+    position: relative;
+    font-family: var(--font-main);
+    font-weight: var(--font-medium);
+    background-color: var(--clr-white);
+    min-height: 100vh;
+
+    @media (--laptop) {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,103 @@
+.text-field {
+    width: 100%;
+
+    &__label {
+        font-size: var(--text-xsm);
+        display: block;
+        width: fit-content;
+        margin-block-end: 0.625rem;
+        text-transform: uppercase;
+        letter-spacing: 0.165em;
+        color: var(--clr-violet-500);
+        grid-column: span 2;
+    }
+
+    &__group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+
+        @media (--laptop) {
+            display: grid;
+            gap: 0.625rem;
+        }
+    }
+
+    &__group-hint {
+        grid-column: span 2;
+    }
+
+    &__hint {
+        display: none;
+        color: var(--clr-red-500);
+        margin-block-start: 0.625rem;
+        font-size: var(--text-xsm);
+    }
+
+    &__input-wrapper {
+        position: relative;
+        border-radius: var(--rounded-base);
+        padding: 0.125rem;
+
+        span {
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    &__input {
+        position: relative;
+        z-index: 3;
+        height: 2.8125rem;
+        padding-inline: 0.875rem;
+        font-size: var(--text-md);
+        border: 0;
+        width: 100%;
+        border-radius: var(--rounded-sm);
+        color: var(--clr-violet-500);
+
+        &::placeholder {
+            color: var(--clr-violet-300);
+        }
+    }
+
+    &__input-border-gradient {
+        z-index: 2;
+        border-radius: inherit;
+        background: var(--gradient-primary);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 200ms ease;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+    }
+
+    &__input-border-main {
+        z-index: 1;
+        border-radius: inherit;
+        padding: 0.0625rem;
+        outline-offset: -1px;
+        outline: 1px solid var(--clr-violet-300);
+    }
+
+    &[aria-invalid="true"] &__input-border-main {
+        transition: background-color 200ms ease;
+        outline-color: var(--clr-red-500);
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+    }
+
+    &[aria-invalid="true"] &__hint {
+        display: block;
+    }
+
+    &__input:focus + &__input-border-gradient {
+        opacity: 1;
+    }
+}

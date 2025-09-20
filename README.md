@@ -1,19 +1,35 @@
-# Frontend Mentor - Interactive card details form solution
+## Frontend Mentor - Interactive Card Details Form Solution
 
 This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Table of contents
+<p>
+  <a href="https://www.frontendmentor.io/solutions/smooth-responsive-cards-interactive-form-w-html---css---js-SPJViWGCqY">
+    <img
+      alt="Solution post"
+      src="https://img.shields.io/badge/Frontendmentor-blue?label=Solution%20on"
+    /></a>
+  <a href="https://haquanq-frontendmentor.github.io/interactive-card-details-form/">
+    <img
+      alt="Live demo"
+      src="https://img.shields.io/badge/Demo-teal?label=Live"
+    /></a>
+  <a href="./LICENSE"
+    ><img
+      allt="MIT License"
+      src="https://img.shields.io/badge/MIT-blue?label=license"
+  /></a>
+</p>
 
-- [Project overview](#rocket-project-overview)
-- [My workflow](#boat-my-workflow)
-- [How to work in this repository](#astronaut-how-to-work-in-this-repository)
-- [License](#page_with_curl-license)
+## Table of Contents
 
-## :rocket: Project overview
+- [Project Overview](#sunrise-project-overview)
+- [Tech Stack and Approach](#stars-tech-stack-and-approach)
+- [Local Development](#leaves-local-development)
+- [Deployment](#maple_leaf-deployment)
 
-### Challenge requirements
+## :sunrise: Project Overview
 
-Users should be able to:
+### Challenge Requirements
 
 - Fill in the form and see the card details update in real-time
 - Receive error messages when the form is submitted if:
@@ -22,71 +38,61 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover, active, and focus states for interactive elements on the page
 
-### Implemented features
+### Status
 
-Core features:
+Features
 
-| Feature                                   | Progress               |
-| ----------------------------------------- | ---------------------- |
-| Show errors on incorrect input            | [ :white_check_mark: ] |
-| Change card image details on input change | [ :white_check_mark: ] |
+- [x] Accessible form controls with validataions (with funny animations)
 
-Accessibility features:
+Accessibility
 
-| Feature                                                | Progress               |
-| ------------------------------------------------------ | ---------------------- |
-| Reponse optimally across different screen size         | [ :white_check_mark: ] |
-| Highlight interactive elements when hover/focus/active | [ :white_check_mark: ] |
+- [x] Responsive accross different screen sizes
+- [x] Interactive elements have clear focus indicator
 
-### Screenshots
+### Preview (Desktop)
 
-![](./.docs/design/desktop-design.jpg)
+![](./docs/design/desktop-design.jpg)
 
-## :boat: My workflow
+## :stars: Tech Stack and Approach
+
+### Built With
+
+- **HTML5** – Semantic structure
+- **CSS Grid & Flexbox** – Layout
+- **PostCSS** – Nested rules, custom media queries, future CSS features, minification
+- **Stylelint** – CSS linting, code style consistency
+- **TypeScript** - Interactivity and application logic
+- **Vite** - Fast development server, production build and easy configuration
 
 ### Approach
 
-Developed with mobile-first workflow.
+- Mobile-first workflow for better performance on smaller devices
+- Accessibility guided by [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/)
 
-### Built with
+## :leaves: Local Development
 
-| Tool         | Note                     |
-| ------------ | ------------------------ |
-| `JavaScript` | Programming language     |
-| `HTML`       | Standard markup language |
-| `CSS`        | Style sheet language     |
+### Prerequisites
 
-## :astronaut: Working in `fm-interactive-card-details-form` repository
+Install the following:
 
-### Presequisites
+- Git (latest version)
+- Node.js (latest LTS recommended)
+- pnpm (latest version)
 
-Having these tools installed:
-
-- Git (prefer lastest LTS version)
-- NodeJS (prefer latest LTS version)
-
-### Clone this project to your machine
-
-Open new terminal, run the following command:
+### Setup
 
 ```
-git clone https://github.com/haquanq/fm-interactive-card-details-form.git
+git clone https://github.com/haquanq-frontendmentor/interactive-card-details-form.git
+cd interactive-card-details-form
+pnpm install
 ```
 
-Then, run `npm install` to install all dependencies.
+### Start Development Server
 
 ```
-npm install
+pnpm dev
 ```
 
-## Development workflow
+## :maple_leaf: Deployment
 
-In terminal, run `npm run dev` to start development server:
-
-```
-npm run dev
-```
-
-## :page_with_curl: License
-
-This project follows [MIT License](./LICENSE). **Do not** use this project as your solution on [Frontend mentor](https://www.frontendmentor.io/solutions)
+Deployed to Github Pages via Github Actions (manually triggered).
