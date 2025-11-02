@@ -1,0 +1,15 @@
+{
+  "name": "Interactive Card Details Form",
+  "featured": false,
+  "colors:": {
+    "brand": "#220930"
+  },
+  "images": {
+    "preview": "https://raw.githubusercontent.com/haquanq-frontendmentor/interactive-card-details-form/main/docs/preview.jpg"
+  },
+  "frontendmentor": {
+    "difficulty": "junior",
+    "challengeUrl": "https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw",
+    "solutionUrl": "https://www.frontendmentor.io/solutions/smooth-responsive-cards-interactive-form-w-html---css---js-SPJViWGCqY"
+  }
+}
