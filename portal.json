@@ -1,6 +1,6 @@
 {
   "name": "Interactive Card Details Form",
-  "featured": false,
+  "featured": true,
   "colors:": {
     "brand": "#220930"
   },
